@@ -20,6 +20,15 @@ class Plugin {
 	private static $instance;
 
 	/**
+	 * Setup the Constructor
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		add_action( 'init', 'register_blockify' );
+	}
+
+	/**
 	 * Plugin Entry point based on Singleton
 	 *
 	 * @return Plugin $plugin Instance of the plugin abstraction.
@@ -30,5 +39,14 @@ class Plugin {
 		}
 
 		return self::$instance;
+	}
+
+	/**
+	 * Register Blockify
+	 *
+	 * @return void
+	 */
+	public function register_blockify() {
+		register_block_type( 'blockify/blurb', array() );
 	}
 }
