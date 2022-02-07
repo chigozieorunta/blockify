@@ -25,7 +25,26 @@ class Plugin {
 	 * @return void
 	 */
 	public function __construct() {
-		add_action( 'init', 'register_blockify' );
+		add_action( 'init', [ $this, 'register_blockify' ] );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'register_blockify_scripts' ] );
+	}
+
+	/**
+	 * Register Blockify
+	 *
+	 * @return void
+	 */
+	public function register_blockify() {
+		register_block_type( 'blockify/blurb', array() );
+	}
+
+	/**
+	 * Register Gutenbergify Script
+	 *
+	 * @return void
+	 */
+	public function register_blockify_scripts() {
+		wp_enqueue_script( 'blockify-blurb', plugins_dir_url() . '/blocks/Blurb/build/index.js', array( 'wp-blocks' ) );
 	}
 
 	/**
@@ -39,14 +58,5 @@ class Plugin {
 		}
 
 		return self::$instance;
-	}
-
-	/**
-	 * Register Blockify
-	 *
-	 * @return void
-	 */
-	public function register_blockify() {
-		register_block_type( 'blockify/blurb', array() );
 	}
 }
