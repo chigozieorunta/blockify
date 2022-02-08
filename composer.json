@@ -1,0 +1,12 @@
+{
+    "name": "chigozieorunta/blockify",
+    "description": "A custom Gutenberg block plugin suite.",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Chigozie Orunta",
+            "email": "chigozieorunta@yahoo.com"
+        }
+    ],
+    "require": {}
+}
