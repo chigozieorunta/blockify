@@ -2,6 +2,7 @@
   "name": "chigozieorunta/blockify",
   "description": "A custom Gutenberg block plugin suite.",
   "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Chigozie Orunta",
