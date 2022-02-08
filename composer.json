@@ -10,5 +10,10 @@
   ],
   "require-dev": {
     "wpsh/local": "^0.2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Blockify\\": "inc/"
+    }
   }
 }
