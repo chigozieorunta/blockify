@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chigozieorunta/blockify/issues"
   },
-  "homepage": "https://github.com/chigozieorunta/blockify#readme"
+  "homepage": "https://github.com/chigozieorunta/blockify#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "20.0.2"
+  }
 }
