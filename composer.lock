@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "528cea788bac22cae3e2035d8e8db3b4",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "wpsh/local",
+            "version": "0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wpsh/wpsh-local.git",
+                "reference": "17338432ed06386273a1ee4db8c8467aa8feab17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wpsh/wpsh-local/zipball/17338432ed06386273a1ee4db8c8467aa8feab17",
+                "reference": "17338432ed06386273a1ee4db8c8467aa8feab17",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Docker Compose development environment for any project.",
+            "support": {
+                "issues": "https://github.com/wpsh/wpsh-local/issues",
+                "source": "https://github.com/wpsh/wpsh-local/tree/master"
+            },
+            "time": "2019-06-12T10:54:32+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
