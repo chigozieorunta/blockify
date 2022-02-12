@@ -1,1 +1,0 @@
-{"version":3,"file":"index.css","mappings":";;;AAAA;;CAEC,+BAA+B;AAChC","sources":["webpack://blockify/./src/index.css"],"sourcesContent":["p:empty:not(:focus)::before,\nh4:empty:not(:focus)::before {\n\tcontent: attr(data-placeholder);\n}\n"],"names":[],"sourceRoot":""}

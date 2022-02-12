@@ -7271,19 +7271,6 @@ module.exports = invariant;
 
 /***/ }),
 
-/***/ "./src/index.css":
-/*!***********************!*\
-  !*** ./src/index.css ***!
-  \***********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -19169,22 +19156,19 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
 
 const {
   registerBlockType
 } = wp.blocks;
 const {
   RichText
-} = wp.editor;
+} = wp.blockEditor;
 
 const {
   Container,
   Row,
   Col
 } = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-
-
 
 const edit = _ref => {
   let {
@@ -19209,15 +19193,13 @@ const edit = _ref => {
   };
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "text-center"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Container, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Row, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Col, {
-    sm: {
-      span: 6,
-      offset: 3
+    className: "text-center",
+    style: {
+      backgroundColor: "#efefef"
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Container, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Row, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Col, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
     key: "editable",
-    tagName: "h2",
+    tagName: "h4",
     placeholder: "Blurb Title",
     value: title,
     onChange: updateTitle
@@ -19234,15 +19216,25 @@ const save = _ref2 => {
   let {
     attributes
   } = _ref2;
+  const {
+    title,
+    body
+  } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "text-center"
+    className: "text-center",
+    style: {
+      backgroundColor: "#efefef"
+    }
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "container"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "row"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "col-sm-6 offset-sm-3"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.body)))));
+    className: "col"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText.Content, {
+    tagName: "p",
+    value: body
+  })))));
 };
 
 registerBlockType('blockify/blurb', {
@@ -19254,7 +19246,7 @@ registerBlockType('blockify/blurb', {
     title: {
       type: 'string',
       source: 'html',
-      selector: 'h2'
+      selector: 'h4'
     },
     body: {
       type: 'string',
