@@ -1,15 +1,13 @@
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.editor;
+const { RichText } = wp.blockEditor;
 const { Container, Row, Col } = require('react-bootstrap');
-
-import './index.css';
 
 const edit = ({ attributes, setAttributes }) => {
 
 	const { title, body } = attributes;
 
 	const updateTitle = newTitle => {
-		setAttributes({ title: newTitle })
+		setAttributes({ title: newTitle });
 	}
 
 	const updateBody = newBody => {
@@ -17,13 +15,13 @@ const edit = ({ attributes, setAttributes }) => {
 	}
 
 	return (
-		<section className="text-center">
+		<section className="text-center" style={{backgroundColor: "#efefef"}}>
 			<Container>
 				<Row>
-					<Col sm={{ span: 6, offset: 3 }}>
+					<Col>
 						<RichText
 							key="editable"
-							tagName="h2"
+							tagName="h4"
 							placeholder="Blurb Title"
 							value={title}
 							onChange={updateTitle}
@@ -43,13 +41,19 @@ const edit = ({ attributes, setAttributes }) => {
 }
 
 const save = ({ attributes }) => {
+
+	const { title, body } = attributes;
+
 	return (
-		<section className="text-center">
+		<section className="text-center" style={{backgroundColor: "#efefef"}}>
 			<div className="container">
 				<div className="row">
-					<div className="col-sm-6 offset-sm-3">
-						<h4>{attributes.title}</h4>
-						<p>{attributes.body}</p>
+					<div className="col">
+						<h4>{title}</h4>
+						<RichText.Content
+							tagName="p"
+							value={body}
+						/>
 					</div>
 				</div>
 			</div>
@@ -66,7 +70,7 @@ registerBlockType('blockify/blurb', {
 		title: {
 			type: 'string',
 			source: 'html',
-			selector: 'h2'
+			selector: 'h4'
 		},
 		body: {
 			type: 'string',
