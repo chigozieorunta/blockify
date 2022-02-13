@@ -15,7 +15,7 @@ const edit = ({ attributes, setAttributes }) => {
 	}
 
 	return (
-		<section className="text-center" style={{backgroundColor: "#efefef"}}>
+		<section>
 			<Container>
 				<Row>
 					<Col>
@@ -45,7 +45,7 @@ const save = ({ attributes }) => {
 	const { title, body } = attributes;
 
 	return (
-		<section className="text-center" style={{backgroundColor: "#efefef"}}>
+		<section>
 			<div className="container">
 				<div className="row">
 					<div className="col">
