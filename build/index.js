@@ -19192,12 +19192,7 @@ const edit = _ref => {
     });
   };
 
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "text-center",
-    style: {
-      backgroundColor: "#efefef"
-    }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Container, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Row, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Col, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Container, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Row, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Col, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
     key: "editable",
     tagName: "h4",
     placeholder: "Blurb Title",
@@ -19220,12 +19215,7 @@ const save = _ref2 => {
     title,
     body
   } = attributes;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
-    className: "text-center",
-    style: {
-      backgroundColor: "#efefef"
-    }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "container"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "row"
