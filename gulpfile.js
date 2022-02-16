@@ -23,4 +23,9 @@ const compile = () => {
 		.pipe(dest(path.css.dest));
 }
 
+const observe = () => {
+	watch(path.css.src, compile);
+}
+
 exports.sass = compile;
+exports.watch = observe;
