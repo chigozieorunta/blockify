@@ -4,6 +4,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
 const minify = require('gulp-clean-css');
 
+const babel = require('gulp-babel');
+
 const path = {
 	src: {
 		css: './assets/src/css/**/*.scss',
