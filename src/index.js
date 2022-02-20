@@ -1,6 +1,5 @@
 const { registerBlockType } = wp.blocks;
 const { RichText } = wp.blockEditor;
-const { Container, Row, Col } = require('react-bootstrap');
 
 const edit = ({ attributes, setAttributes }) => {
 
@@ -16,26 +15,20 @@ const edit = ({ attributes, setAttributes }) => {
 
 	return (
 		<section>
-			<Container>
-				<Row>
-					<Col>
-						<RichText
-							key="editable"
-							tagName="h4"
-							placeholder="Blurb Title"
-							value={title}
-							onChange={updateTitle}
-						/>
-						<RichText
-							key="editable"
-							tagName="p"
-							placeholder="Blurb Body"
-							value={body}
-							onChange={updateBody}
-						/>
-					</Col>
-				</Row>
-			</Container>
+			<RichText
+				key="editable"
+				tagName="h4"
+				placeholder="Blurb Title"
+				value={title}
+				onChange={updateTitle}
+			/>
+			<RichText
+				key="editable"
+				tagName="p"
+				placeholder="Blurb Body"
+				value={body}
+				onChange={updateBody}
+			/>
 		</section>
 	);
 }
@@ -46,17 +39,11 @@ const save = ({ attributes }) => {
 
 	return (
 		<section>
-			<div className="container">
-				<div className="row">
-					<div className="col">
-						<h4>{title}</h4>
-						<RichText.Content
-							tagName="p"
-							value={body}
-						/>
-					</div>
-				</div>
-			</div>
+			<h4>{title}</h4>
+			<RichText.Content
+				tagName="p"
+				value={body}
+			/>
 		</section>
 	);
 }
