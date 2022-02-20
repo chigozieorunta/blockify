@@ -59,6 +59,11 @@ registerBlockType('blockify/blurb', {
 			source: 'html',
 			selector: 'h4'
 		},
+		footnote: {
+			type: 'string',
+			source: 'html',
+			selector: 'h6'
+		},
 		body: {
 			type: 'string',
 			source: 'html',
