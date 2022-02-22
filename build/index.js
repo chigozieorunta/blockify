@@ -127,6 +127,12 @@ const edit = _ref => {
     onChange: updateTitle
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
     key: "editable",
+    tagName: "h6",
+    placeholder: "Blurb Footnote",
+    value: footnote,
+    onChange: updateFootnote
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
+    key: "editable",
     tagName: "p",
     placeholder: "Blurb Body",
     value: body,
@@ -142,7 +148,7 @@ const save = _ref2 => {
     title,
     body
   } = attributes;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText.Content, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h4", null, title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h6", null, footnote), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText.Content, {
     tagName: "p",
     value: body
   }));
