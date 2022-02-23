@@ -24,6 +24,13 @@ const edit = ({ attributes, setAttributes }) => {
 			/>
 			<RichText
 				key="editable"
+				tagName="h6"
+				placeholder="Blurb Footnote"
+				value={footnote}
+				onChange={updateFootnote}
+			/>
+			<RichText
+				key="editable"
 				tagName="p"
 				placeholder="Blurb Body"
 				value={body}
@@ -40,6 +47,7 @@ const save = ({ attributes }) => {
 	return (
 		<section>
 			<h4>{title}</h4>
+			<h6>{footnote}</h6>
 			<RichText.Content
 				tagName="p"
 				value={body}
