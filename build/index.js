@@ -113,6 +113,12 @@ const edit = _ref => {
     });
   };
 
+  const updateFootnote = newFootnote => {
+    setAttributes({
+      footnote: newFootnote
+    });
+  };
+
   const updateBody = newBody => {
     setAttributes({
       body: newBody
