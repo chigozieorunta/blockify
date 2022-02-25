@@ -9,6 +9,10 @@ const edit = ({ attributes, setAttributes }) => {
 		setAttributes({ title: newTitle });
 	}
 
+	const updateFootnote = newFootnote => {
+		setAttributes({ footnote: newFootnote });
+	}
+
 	const updateBody = newBody => {
 		setAttributes({ body: newBody });
 	}
